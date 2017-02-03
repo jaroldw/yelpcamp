@@ -1,3 +1,5 @@
+<% include partials/header %>
+
 <h1>Campgrounds page</h1>
 
 <% campgrounds.forEach(function(cg) { %>
@@ -6,3 +8,5 @@
         <img src="<%= cg.image %>">
     </div>
 <% }); %>
+
+<% include partials/footer %>
