@@ -5,7 +5,9 @@ var express = require('express'),
     Campground = require('./models/campground'),
     seedDB = require('./seeds');
 
-mongoose.connect('mongodb://localhost/yelp_camp');
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
